@@ -24,13 +24,13 @@ const App: React.FC = () => {
       name: "Royal Pilau",
       price: 200,
       description: "Fragrant rice cooked with our signature blend of Swahili spices, tender beef, and caramelized onions. Served with kachumbari.",
-      image: "https://picsum.photos/id/1080/600/400" // Placeholder for food
+      image: "https://images.unsplash.com/photo-1579631542720-3a87824fff86?q=80&w=600&auto=format&fit=crop"
     },
     {
       name: "Royal Biryani",
       price: 200,
       description: "A rich and aromatic layered rice dish with marinated chicken, saffron, potatoes, and dried fruits. A feast for the senses.",
-      image: "https://picsum.photos/id/1060/600/400" // Placeholder for food
+      image: "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=600&auto=format&fit=crop"
     }
   ];
 
@@ -95,8 +95,8 @@ const App: React.FC = () => {
         {/* Background with overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://picsum.photos/id/292/1920/1080" 
-            alt="Spices and ingredients" 
+            src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=1920&auto=format&fit=crop" 
+            alt="A large platter of delicious royal biryani" 
             className="w-full h-full object-cover grayscale-[30%]"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-royale-brown/90 via-royale-brown/70 to-royale-brown/90"></div>
@@ -152,8 +152,8 @@ const App: React.FC = () => {
           <div className="flex-1 w-full relative">
             <div className="absolute inset-0 border-2 border-royale-gold translate-x-4 translate-y-4 hidden md:block"></div>
             <img 
-              src="https://picsum.photos/id/305/800/800" 
-              alt="Authentic preparation" 
+              src="https://images.unsplash.com/photo-1532336414038-cf19250c5757?q=80&w=800&auto=format&fit=crop" 
+              alt="A vibrant arrangement of authentic Swahili spices" 
               className="w-full aspect-square md:aspect-[4/5] object-cover relative z-10 shadow-xl"
             />
           </div>
@@ -204,7 +204,7 @@ const App: React.FC = () => {
                 </div>
                 <img 
                   src={item.image} 
-                  alt={item.name} 
+                  alt={`A delicious serving of ${item.name}`} 
                   className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
