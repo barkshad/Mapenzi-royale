@@ -145,7 +145,7 @@ const App: React.FC = () => {
             </p>
             <div className="pt-4">
               <div className="inline-block border-b border-royale-brown pb-1 text-royale-brown font-medium tracking-wide">
-                Est. 2024
+                Est. 2026
               </div>
             </div>
           </div>
@@ -256,7 +256,7 @@ const App: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 mb-8 uppercase tracking-wider text-xs">
             <div className="flex items-center gap-2">
               <MapPin size={14} className="text-royale-gold" />
-              <span>Nairobi, Kenya</span>
+              <span>Nakuru, Kenya</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock size={14} className="text-royale-gold" />
