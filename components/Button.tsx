@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'whatsapp';
+  variant?: 'primary' | 'secondary' | 'whatsapp' | 'outline';
   fullWidth?: boolean;
   href?: string;
   icon?: React.ReactNode;
@@ -16,12 +16,14 @@ export const Button: React.FC<ButtonProps> = ({
   className = '',
   ...props 
 }) => {
-  const baseStyles = "inline-flex items-center justify-center gap-3 px-8 py-4 text-sm font-sans uppercase tracking-widest font-medium transition-all duration-300 ease-out disabled:opacity-50 disabled:cursor-not-allowed";
+  // Base styles: Sharp corners (rounded-none), consistent spacing (py-4 px-8), robust typography
+  const baseStyles = "inline-flex items-center justify-center gap-3 py-4 px-8 text-xs md:text-sm font-sans uppercase tracking-widest font-medium transition-colors duration-200 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed rounded-none";
   
   const variants = {
-    primary: "bg-royale-gold text-royale-brown hover:bg-white hover:text-royale-brown border border-royale-gold hover:border-royale-brown",
+    primary: "bg-royale-brown text-white border border-royale-brown hover:bg-royale-gold hover:border-royale-gold hover:text-white",
     secondary: "bg-transparent text-white border border-white hover:bg-white hover:text-royale-brown",
-    whatsapp: "bg-[#25D366] text-white hover:bg-[#128C7E] border border-transparent shadow-sm",
+    whatsapp: "bg-[#25D366] text-white hover:bg-[#128C7E] border border-transparent",
+    outline: "bg-transparent text-royale-brown border border-royale-brown hover:bg-royale-brown hover:text-white"
   };
 
   const widthClass = fullWidth ? "w-full" : "";
@@ -31,7 +33,7 @@ export const Button: React.FC<ButtonProps> = ({
   if (href) {
     return (
       <a href={href} className={classes} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer">
-        {icon && <span className="w-5 h-5">{icon}</span>}
+        {icon && <span className="w-4 h-4">{icon}</span>}
         {children}
       </a>
     );
@@ -39,7 +41,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <button className={classes} {...props}>
-      {icon && <span className="w-5 h-5">{icon}</span>}
+      {icon && <span className="w-4 h-4">{icon}</span>}
       {children}
     </button>
   );
